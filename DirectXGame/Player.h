@@ -3,6 +3,7 @@
 #include "Model.h"
 #include "ViewProjection.h"
 #include "WorldTransform.h"
+#include "Input.h"
 
 class Player
 {
@@ -17,4 +18,11 @@ private:
 	Model* model_ = nullptr;
 	WorldTransform worldTransform_;
 	uint32_t textureHandle_ = 0;
+	Input* input_ = nullptr;
+
+	//キャラクターの移動速さ
+	const float kCaracterSpeed = 0.2f;
+	
+	const float kMoveLimitX = 34.0f;
+	const float kMoveLimitY = 18.0f;
 };
